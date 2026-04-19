@@ -118,3 +118,4 @@ This project is the Fire Safety Management System — a modular web application 
    - Add your presenter name and contact details to the slides and the `README.md` if desired.
 
 If you want, I can also generate a slide deck (PowerPoint or PDF) with these slides and the demo script. Tell me which format you prefer and any branding or logos to include.
+# fire-safety
