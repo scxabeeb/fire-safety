@@ -6,25 +6,29 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('incident_images', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('fire_incident_id')->constrained()->onDelete('cascade');
-            $table->string('image_path');
-            $table->string('caption')->nullable();
-            $table->timestamps();
-        });
+        if (
+            Schema::hasTable('incident_images') &&
+            !Schema::hasColumn('incident_images', 'category')
+        ) {
+            Schema::table('incident_images', function (Blueprint $table) {
+                $table->string('category')
+                      ->default('general')
+                      ->after('image_path');
+            });
+        }
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('incident_images');
+        if (
+            Schema::hasTable('incident_images') &&
+            Schema::hasColumn('incident_images', 'category')
+        ) {
+            Schema::table('incident_images', function (Blueprint $table) {
+                $table->dropColumn('category');
+            });
+        }
     }
 };

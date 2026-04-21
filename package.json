@@ -10,7 +10,11 @@
         "@inertiajs/vue3": "^2.0.0",
         "@tailwindcss/forms": "^0.5.3",
         "@tailwindcss/vite": "^4.0.0",
+<<<<<<< HEAD
         "@vitejs/plugin-vue": "^6.0.6",
+=======
+        "@vitejs/plugin-vue": "^5.0.0",
+>>>>>>> 275e5b7005a1aaf059fc09c0b221e37187f7716a
         "autoprefixer": "^10.4.12",
         "axios": "^1.11.0",
         "concurrently": "^9.0.1",
@@ -24,4 +28,8 @@
         "chart.js": "^4.4.1",
         "vue-chartjs": "^5.3.0"
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 275e5b7005a1aaf059fc09c0b221e37187f7716a
